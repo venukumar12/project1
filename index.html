@@ -1,0 +1,467 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../node_modules/bootstrap-icons/font/bootstrap-icons.css">
+    <title>Shoper</title>
+    <style>
+        header{
+            display: flex;
+            justify-content: space-between;
+        }
+        .brand-title{
+            font-size: 25px;
+            font-weight: bold;
+        }
+        .brand-menu{
+            font-size: 20px;
+        }
+        
+        .brand-icons{
+            font-size: 20px;
+            
+        }
+        .brand-icons span{
+            margin-right: 20px;
+        }
+        .brand-menu span{
+            margin-right: 25px;
+        }
+        .brand-offer{
+            background-color: black;
+            color: white;
+            padding: 5px;
+            text-align: center;
+        }
+        .brand-nav{
+            margin-top: 10px;
+            height: 450px;
+            display: grid;
+            grid-template-columns: 4fr 4fr 4fr;
+        }
+        .banner-title{
+            font-size: 40px;
+            font-weight: bold;
+            color: white;
+            text-shadow: 2px 2px 2px black;
+        }
+        .women{
+            background-image: url(../public/images/shop\ 2.jpg);
+            background-size: cover;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-evenly;
+            opacity: 0.6;
+            text-align: center;
+            position: relative;
+            align-items: center;
+        }
+        .women:hover{
+            opacity: 1;
+        }
+        .women:hover span{
+            margin-left: 20px;
+            transition: 1s;
+        }
+        .men{
+            background-image: url(../public/images/shop\ 1.jpg);
+            background-size: cover;
+            display: flex;
+            flex-direction: column;
+            text-align: center;
+            justify-content: space-evenly;
+           opacity: 0.6;
+           align-items: center;
+           position: relative;
+        }
+        .men:hover{
+            opacity: 1;
+        }
+        .men:hover span{
+            margin-left: 20px;
+            transition: 1s;
+        }
+        .kids{
+            background-image: url(../public/images/shop\ 3.jpg);
+            background-size: cover;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-evenly;
+            opacity: 0.6;
+            text-align: center;
+            align-items: center;
+            position: relative;
+            
+        }
+        .kids:hover{
+            opacity: 1;
+        }
+        .kids:hover span{
+            margin-left: 20px;
+            transition: 1s;
+        }
+        .men button{
+            width: 200px;
+            height: 45px;
+            background-color: white;
+            text-align: center;
+            border: none;
+        }
+        .women button{
+            width: 200px;
+            height: 45px;
+            background-color: white;
+            text-align: center;
+            border: none;
+        }
+        .kids button{
+            width: 200px;
+            height: 45px;
+            background-color: white;
+            text-align: center;
+            border: none;
+        }
+       .men{
+        border: 1px solid gray;
+        width: 310;
+        overflow: hidden;
+
+       }
+       .men-banner{
+        transform: translateX(0px);
+        transition: 2s;
+       }
+       .men-banner:hover{
+        transform: translateX(-10px);
+        transition: 2s;
+       }
+       .men-banner:hover img{
+        width: 350px;
+       }
+      
+    
+     
+     .arrow{
+        width: 100%;
+        height: 450px;
+        display: grid;
+        grid-template-columns: 4fr 8fr;
+        margin-top: 20px;
+        background-color: lightyellow;
+        
+
+
+     }
+     .arrow-title1{
+        background-image: url(./images/hero.jpg.jpg);
+        background-size: cover;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-evenly;
+           text-align: center;
+           margin-left: 100px;
+           margin-top: 0px;
+           position: relative;
+           margin-right: 10px;
+    
+     }
+     .arrow-title1 button{
+        width: 200px;
+            height: 45px;
+            background-color: white;
+        text-align: center;
+        transform: translate(0px,0px);
+        transition: 2s;
+        border: none;
+     }
+     .arrow-title1:hover{
+        transform: translate(3px,3px);
+        transition: 2s;
+     }
+     .arrow-title1:hover span{
+        margin-left: 20px;
+            transition: 1s;
+     }
+     .arrow-title2{
+        background-image: url(./images/men\ shop.jpg);
+       background-size: cover;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-evenly;
+          position: relative;
+        
+            margin-right: 250px;
+            margin-left: 10px;
+            text-align: center;
+         }
+     .arrow-title2 button{
+        width: 200px;
+            height: 45px;
+            background-color: white;
+        text-align: center;
+        transform: translate(0px,0px);
+        transition: 2s;
+        border: none;
+     }
+     .arrow-title2:hover{
+        transform: translate(3px,3px);
+        transition: 2s;
+     }
+     .arrow-title2:hover span{
+        margin-left: 20px;
+        transition: 1s;
+     }
+    
+    main{
+        display: grid;
+        grid-template-columns: 3fr 3fr 3fr 3fr;
+        justify-content: space-evenly;
+        margin-left: 30px;
+        padding: 20px;
+    }
+    .beast{
+        text-align: center;
+        height: 200px;
+        align-items: center;
+    }
+     .section{
+        width: 100%;
+        height: 450px;
+        display: grid;
+        grid-template-columns: 8fr 4fr;
+        margin-top: 20px;
+        background-color: lightyellow;
+     }
+     .section1{
+        background-image: url("./images/Section1.jpg");
+        background-size: cover;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-evenly;
+          position: relative;
+        
+            margin-right: 200px;
+            margin-left: 100px;
+            text-align: center;
+            color: azure;
+        }
+        .section2{
+             background-image: url(./images/Section2.jpg);
+             background-size: cover;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-evenly;
+           text-align: center;
+           margin-left: -180px;
+           margin-top: 0px;
+           position: relative;
+           margin-right: 250px;
+           color: azure;
+        }
+        .section1 button{
+            width: 200px;
+            height: 45px;
+            background-color: white;
+        text-align: center;
+        transform: translate(0px,0px);
+        transition: 2s;
+        border: none;
+
+        }
+        .section2 button{
+            width: 200px;
+            height: 45px;
+            background-color: white;
+        text-align: center;
+        transform: translate(0px,0px);
+        transition: 2s;
+        border: none;
+        }
+        .section1:hover{
+            transform: translate(3px,3px);
+            transition: 3s;
+
+        }
+        .section1:hover span{
+            margin-left: 20px;
+            transition:3s;
+
+        }
+        .section2:hover
+            {
+                transform: translate(3px,3px);
+                transition: 3s;
+            }
+        .section2:hover span{
+            margin-left: 20px ;
+            transition: 3s;
+
+            }
+            .gents{
+                font-size: 30px;
+                color: brown;
+                text-shadow: 5px 5px 5px black;
+                font-weight: bo
+            }
+    </style>
+<body class="container-fluid">
+    <header>
+        <div class="brand-title">
+            shoper
+        </div>
+        <div class="brand-menu">
+            <span>Home</span>
+            <span>blog</span>
+            <span>cataloge</span>
+            <span>shop</span>
+            <span>Docs</span>
+            <span>Pages</span>
+        </div>
+        <div class="brand-icons">
+            <span class="bi bi-search"></span>
+            <span class="bi bi-person"></span>
+            <span class="bi bi-heart"></span>
+            <span class="bi bi-cart"></span>
+        </div>
+    </header> 
+    <div class="brand-offer">
+        <span class="bi bi-lightning-fill"></span>HAPPY HOLIDAYS DEALS ON EVERYTHING  <span class="bi bi-lightning-fill"></span>
+    </div>
+    <div class="brand-nav">
+        <div class="women">
+         <div class="banner-title">
+          women
+         </div>
+         <div>
+            <button>
+                <span>Shoping Women</span>
+                 <span class="bi bi-arrow-right"></span>
+                </button>
+         </div>
+        </div>
+        <div class="men">
+         <div class="banner-title">
+            men
+         </div>
+         <div>
+            <button>
+               <span> Shoping For Mens</span>
+                 <span class="bi bi-arrow-right"></span>
+            </button>
+         </div>
+        </div>
+         <div class="kids">
+            <div class="banner-title">
+                kids
+            </div>
+                <div>
+                    <button>
+                        <span>Shoping kids</span>
+                        <span class="bi bi-arrow-right "></span>
+                    </button>
+                </div>
+         </div>
+    </div>
+    <main>
+        <div class="a1">
+            <div>
+                <span class="bi bi-truck text-danger"></span>
+            </div>
+            <div>
+                <span>FREE SHOPING</span>
+                <P>From All Orders Over $100</P>
+            </div>
+
+        </div>
+        <div class="a2">
+            <div>
+                <span class="bi bi-tag text-danger"></span>
+            </div>
+            <div>
+                <span>OVER 10,000 STYLES </span>
+                <p>We Have Everything You Need</p>
+            </div>
+
+        </div>
+        <div class="a3">
+            <div>
+                <span class="bi bi-lock text-danger"></span>
+            </div>
+            <div>
+                <span>SECURES SHOPING</span>
+                <P>You Are In Safe Hands</P>
+            </div>
+
+        </div>  <div class="a4">
+            <div>
+                <span class="bi bi-repeat text-danger"></span>
+            </div>
+            <div>
+                <span>FREE RETURUNS</span>
+                <P>Return Money Within 30 Days</P>
+            </div>
+
+        </div>
+    </main>
+    <hr class="venu">
+    <div>
+        <div class="beast">
+        <div>NEW COLLECTIONS</div>
+    
+        <h1>
+            Best Picks 2019
+        </h1>
+        <p>
+            Appear, dry three darkness they're seas,dry waters thing fly midst,beast <br>above fly brought very green
+        </p>
+        </div>
+    </div>
+    <div class="arrow">
+       <div class="arrow-title1">
+        <div>
+            <div class="banner-title">Best Collections For Ladys</div>
+            <button>
+                <span>Shoping</span> 
+                <span class="bi bi-arrow-right"></span>
+            </button>
+        </div>
+
+       </div>
+       <div class="arrow-title2">
+        <div>
+            <div class="banner-title">Best Collections For Gents</div>
+            <button>
+            
+            <span>online</span>
+                 <span class="bi bi-arrow-right"></span>
+            </button>
+        </div>
+       </div>
+    </div>
+    <div class="section">
+        <div class="section1">
+         <div>
+             <div class="banner-title">Best Collections For Ladys</div>
+             <button>
+                 <span>Shoping</span> 
+                 <span class="bi bi-arrow-right"></span>
+             </button>
+         </div>
+ 
+        </div>
+        <div class="section2">
+         <div>
+             <div class="banner-title">Best Collections For Gents</div>
+              <button>
+              <span>online</span>
+                  <span class="bi bi-arrow-right"></span>
+             </button>
+         </div>
+        </div>
+     </div>
+
+
+</body>
+</html>
